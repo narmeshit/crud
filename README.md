@@ -7,7 +7,11 @@ Es un acrónimo que representa las cuatro operaciones básicas que se pueden rea
 - **Update (Actualizar):** La operación de actualizar se utiliza para modificar la información de un registro existente en la base de datos. Se suele utilizar cuando un usuario edita su perfil o actualiza alguna otra información.
 - **Delete (Eliminar):**La operación de eliminar consiste en borrar uno o más registros de la base de datos. Esto se utiliza cuando se quiere eliminar permanentemente un registro.
 
-## Ejemplo en SQL
+## CRUD con Datos en Memoria
+
+Utiliza listas en memoria para simular la funcionalidad
+
+## Crud con Base de datos
 
 Create
 
