@@ -1,72 +1,16 @@
-# CRUD
+# CRUD con APIs REST (Representational State Transfer)
 
-Es un acrónimo que representa las cuatro operaciones básicas que se pueden realizar en una base de datos o sistema de almacenamiento de información. Estas operaciones son:
+Es una forma de comunicación entre sistemas que sigue principios específicos para intercambiar datos a través de la web. Imagina que las APIs REST son como mensajeros que entregan y traen información entre diferentes aplicaciones, usando HTTP, el mismo protocolo que usamos para navegar por internet.
 
-- **Create (Crear):** La operación de crear consiste en insertar un nuevo registro en la base de datos. Este es el primer paso cuando se desea almacenar nueva información.
-- **Read (Leer):** La operación de leer implica recuperar uno o más registros de la base de datos. Esto se utiliza para mostrar datos al usuario o para consultar información específica.
-- **Update (Actualizar):** La operación de actualizar se utiliza para modificar la información de un registro existente en la base de datos. Se suele utilizar cuando un usuario edita su perfil o actualiza alguna otra información.
-- **Delete (Eliminar):**La operación de eliminar consiste en borrar uno o más registros de la base de datos. Esto se utiliza cuando se quiere eliminar permanentemente un registro.
+## ¿Cómo funciona?
 
-## CRUD con Datos en Memoria
+- **Recursos:** Todo se trata de recursos, que pueden ser cosas como usuarios, productos, pedidos, etc. Cada recurso tiene una dirección única (URL) que lo identifica, como una dirección postal para una casa.
+- **Operaciones básicas (CRUD):** Con una API REST, puedes realizar cuatro operaciones principales en estos recursos, que son:
 
-Utiliza listas en memoria para simular la funcionalidad
+### Crear (POST): Añadir un nuevo recurso.
+### Leer (GET): Obtener información de un recurso.
+### Actualizar (PUT o PATCH): Modificar un recurso existente.
+### Eliminar (DELETE): Borrar un recurso
 
-## Crud con Base de datos
-
-Create
-
-```
-INSERT INTO nombre_tabla (columna1, columna2) VALUES ("valor_columna1", "valor_columna2");
-```
-
-```
-INSERT INTO users (username, password) VALUES ('admin', 'admin');
-```
-
-
-Read
-
-```
-SELECT * FROM nombre_tabla WHERE columna1 = 'valor_columna1';
-```
-
-```
-SELECT * FROM users WHERE username = 'admin';
-```
-
-Update
-
-```
-UPDATE nombre_tabla SET columna2 = 'valor_columna2' WHERE columna1 = 'valor_columna1';
-```
-
-```
-UPDATE users SET username = 'administrador' WHERE id = 1;
-```
-
-Delete
-
-```
-DELETE FROM nombre_tabla WHERE columna1 = 'valor_columna1';
-```
-
-```
-DELETE FROM users WHERE id = 1;
-```
-
-CRUD es fundamental en el desarrollo de aplicaciones, ya que cubre las operaciones más comunes que las aplicaciones realizan con datos. Se puede aplicar tanto a bases de datos relacionales (como MySQL, PostgreSQL) como a bases de datos NoSQL o cualquier tipo de sistema de almacenamiento de datos.
-
-# CRUD en una API RESTful
-
-En una API RESTful, las operaciones CRUD se suelen mapear a métodos HTTP, que son utilizados por los clientes para interactuar con el servidor.
-
-- **Create (POST):** Un cliente envía una solicitud POST para crear un nuevo recurso. El servidor procesa esta solicitud y almacena el recurso.
-- **Read (GET):** El cliente envía una solicitud GET para recuperar información. Puede ser una solicitud de un recurso específico o de una colección de recursos.
-- **Update (PUT/PATCH):** El cliente envía una solicitud PUT (para actualizar completamente) o PATCH (para actualizaciones parciales) para modificar un recurso existente.
-- **Delete (DELETE):** El cliente envía una solicitud DELETE para eliminar un recurso.
-
-## Consideraciones
-
-- **Seguridad:** Las operaciones CRUD deben estar protegidas mediante autenticación y autorización para asegurarse de que solo los usuarios autorizados puedan realizar cambios en los datos.
-- **Validación de Datos:** Antes de realizar cualquier operación, se deben validar los datos para evitar inconsistencias en la base de datos.
-- **Transacciones:** En sistemas complejos, las operaciones CRUD pueden involucrar múltiples pasos que necesitan ser atómicos. Es decir, o se completan todas las operaciones o no se realiza ninguna. Esto se maneja con transacciones en bases de datos.
+- **Stateless:** Una característica importante de REST es que es "sin estado" (stateless). Esto significa que cada solicitud que haces es independiente de las anteriores. El servidor no recuerda las solicitudes anteriores, lo que hace que cada mensaje sea completo en sí mismo.
+- **Formato de datos:** El intercambio de datos generalmente se hace en formatos ligeros como JSON o XML. JSON es el más común porque es más fácil de leer tanto para las personas como para las máquinas.
