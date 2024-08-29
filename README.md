@@ -11,48 +11,47 @@ Es un acrónimo que representa las cuatro operaciones básicas que se pueden rea
 
 Create
 
-```
+```sql
 INSERT INTO nombre_tabla (columna1, columna2) VALUES ("valor_columna1", "valor_columna2");
 ```
 
-```
+```sql
 INSERT INTO users (username, password) VALUES ('admin', 'admin');
 ```
 
-
 Read
 
-```
+```sql
 SELECT * FROM nombre_tabla WHERE columna1 = 'valor_columna1';
 ```
 
-```
+```sql
 SELECT * FROM users WHERE username = 'admin';
 ```
 
 Update
 
-```
+```sql
 UPDATE nombre_tabla SET columna2 = 'valor_columna2' WHERE columna1 = 'valor_columna1';
 ```
 
-```
+```sql
 UPDATE users SET username = 'administrador' WHERE id = 1;
 ```
 
 Delete
 
-```
+```sql
 DELETE FROM nombre_tabla WHERE columna1 = 'valor_columna1';
 ```
 
-```
+```sql
 DELETE FROM users WHERE id = 1;
 ```
 
 CRUD es fundamental en el desarrollo de aplicaciones, ya que cubre las operaciones más comunes que las aplicaciones realizan con datos. Se puede aplicar tanto a bases de datos relacionales (como MySQL, PostgreSQL) como a bases de datos NoSQL o cualquier tipo de sistema de almacenamiento de datos.
 
-# CRUD en una API RESTful
+## CRUD en una API RESTful
 
 En una API RESTful, las operaciones CRUD se suelen mapear a métodos HTTP, que son utilizados por los clientes para interactuar con el servidor.
 
